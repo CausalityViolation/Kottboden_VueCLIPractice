@@ -1,4 +1,4 @@
-# vueclipractice
+# Server frontend for school project for "Utv. av webbapplikationer"
 
 ## Project setup
 ```
