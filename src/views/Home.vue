@@ -8,10 +8,10 @@
       <p>| Merchandise in Stock |</p>
 
       <ul>
-        <li v-for="gris in Grisar" v-bind:key="gris.GrisId">
-          | {{ gris.GrisNamn }}
-          {{ gris.GrisLand }}
-          {{ gris.GrisPris }} |
+        <li v-for="gris in grisar" v-bind:key="gris.grisNamn">
+          | {{ gris.grisNamn }}
+          {{ gris.grisLand }}
+          {{ gris.grisPris }} |
         </li>
       </ul>
     </div>
@@ -20,30 +20,26 @@
   </div>
 </template>
 
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  },
-
+  name: "Home",
   data: function () {
-
-    let currency = "kr";
-
     return {
-      Grisar: [
-        {GrisId: 1, GrisNamn: "Gösta", GrisLand: "Sverige", GrisPris: 300 + currency},
-        {GrisId: 2, GrisNamn: "Göran", GrisLand: "Sverige", GrisPris: 599 + currency},
-        {GrisId: 3, GrisNamn: "Göttans", GrisLand: "Sverige", GrisPris: 234235 + currency},
-        {GrisId: 4, GrisNamn: "Götteli", GrisLand: "Sverige", GrisPris: 123123 + currency},
-        {GrisId: 5, GrisNamn: "Göttmos", GrisLand: "Sverige", GrisPris: 3458 + currency}
-      ]
+      grisar: []
     }
+  },
+  mounted() {
+    fetch('http://127.0.0.1:3030/pigs/')
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data.pigs);
+          this.grisar = data.pigs;
+        });
   }
+
 }
 </script>
 
@@ -65,6 +61,7 @@ li {
 
 a {
   color: #375386;
+
 }
 
 </style>
