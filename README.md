@@ -1,4 +1,4 @@
-# Server frontend for school project for "Utv. av webbapplikationer"
+#Frontend for school project for "Utv. av webbapplikationer"
 
 ## Project setup
 ```
