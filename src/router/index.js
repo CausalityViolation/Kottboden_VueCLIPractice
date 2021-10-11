@@ -5,30 +5,35 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/purchase',
-    name: 'Purchase Merchandise',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Purchase.vue')
-  },
-  {
-    path: "/farrows",
-    name: "Information",
-    component: () => import(/* webpackChunkName: "about" */ '../views/Information.vue')
-  },
-  {
-    path: "/quiz",
-    name: "Piglet Quiz",
-    component: () => import(/* webpackChunkName: "about" */ '../views/Quiz.vue')
-  }
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/purchase',
+        name: 'Purchase Merchandise',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Purchase.vue')
+    },
+    {
+        path: "/farrows",
+        name: "Information",
+        component: () => import(/* webpackChunkName: "about" */ '../views/Information.vue')
+    },
+    {
+        path: "/quiz",
+        name: "Piglet Quiz",
+        component: () => import(/* webpackChunkName: "about" */ '../views/Quiz.vue')
+    },
+    {
+        path: "/contact",
+        name: "Contact",
+        component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+    }
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router

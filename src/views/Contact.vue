@@ -17,14 +17,12 @@
       <div class="circle"></div>
       <div class="form-inner">
 
-        <h1>Order form</h1>
+        <h1>Contact Us</h1>
+        <p>One of our support agents will get back to you as soon as possible!</p>
         <input type="text" placeholder="Name">
         <input type="email" placeholder="Email">
-        <input type="text" placeholder="Street Address">
-        <input type="text" placeholder="City">
-        <input type="text" placeholder="Post Code">
-        <textarea placeholder="Order Details" rows="10"></textarea>
-        <button v-on:click="submitForm($event)" type="submit">Place Order</button>
+        <textarea placeholder="Message" rows="10"></textarea>
+        <button v-on:click="submitForm($event)" type="submit">Submit</button>
       </div>
     </form>
 
@@ -161,7 +159,7 @@ form {
 }
 
 button {
-  width: 115%;
+  width: 40%;
   padding: 10px;
   margin-top: 20px;
   border-radius: 20px;

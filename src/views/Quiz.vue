@@ -201,6 +201,20 @@ export default {
           this.score++;
         }
 
+      if (this.score === 5) {
+        alert("やるやん！満点！5/5!");
+      } else if (this.score === 4) {
+        alert("4/5. 惜しい！もうちょっと頑張れな")
+      } else if (this.score === 3) {
+        alert("3/5. まあまあ")
+      } else if (this.score === 2) {
+        alert("2/5. Keep trying!")
+      } else if (this.score === 1) {
+        alert("1/5. Oof")
+      } else if (this.score === 0) {
+        alert("0/5.. What")
+      }
+
 
       document.getElementById("selection").innerHTML += "Answer: " + this.stringifiedAnswers + "<br>"
       document.getElementById("selection").innerHTML += "Score: " + this.score + "<br>"

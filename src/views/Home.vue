@@ -11,7 +11,7 @@
         <li v-for="gris in grisar" v-bind:key="gris.grisNamn">
           | {{ gris.grisNamn }}
           {{ gris.grisLand }}
-          {{ gris.grisPris }} |
+          {{ gris.grisPris }}kr |
         </li>
       </ul>
     </div>

@@ -5,9 +5,12 @@
       |
       <router-link to="/purchase">Purchase</router-link>
       |
+      <router-link to="/quiz">Piglet Quiz</router-link>
+      |
       <router-link to="/farrows">Information</router-link>
       |
-      <router-link to="/quiz">Piglet Quiz</router-link>
+      <router-link to="/contact">Contact</router-link>
+
     </div>
     <router-view/>
   </div>
